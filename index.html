@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Matlock &bull; Coder</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAABlIKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREAAAAAABEREREAAAABEQAAERAAABEAAAAAEQABEAAAAAABEBEAAAAAAAAREAAAAAAAAAEQAAAAAAAAAQAAAAAAAAAAAAARAAARAAAAABEAABEAAAAAEQAAEQAAAAARAAARAAAAABEAABEAAAAAEQAAEQAAAAARAAARAAD8PwAA8A8AAOPHAADP8wAAn/kAAD/8AAB//gAAf/4AAP//AADzzwAA888AAPPPAADzzwAA888AAPPPAADzzwAA" rel="icon" type="image/x-icon" />
+    <style>
+        /* html reset */
+        html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,ol,ul,li,fieldset,
+        form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,footer,header,menu,nav,section {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+            display: block;
+        }
+
+        /*Styling*/
+
+        /* layout */
+        body {
+            font-family: 'Segoe UI','SegoeUI','Helvetica Neue',Helvetica,Arial,sans-serif;
+            font-size: .825em;
+            line-height: 1.3; 
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility; 
+            max-width: 60em;
+            margin: auto; 
+            padding: 1em
+        }
+
+        body > main,
+        aside > section > article {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main > section {
+            width: 69%;
+            padding: 0 2.5em 0 0;
+        }
+
+        main > aside {
+            width: 31%;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            padding: 1.6em 0 0 0;
+            color: #2079c7
+        }
+
+        a, a:hover, a:focus, a:active {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 400;
+        }
+
+        nav > ul {
+            list-style-type: none;
+        }
+
+        section > h3 > span {
+            font-weight: 400;
+        }
+
+        section > h3 > span:nth-child(2) {
+            font-style: italic;
+        }
+
+        aside > p:nth-child(2),
+        aside > section,
+        nav > ul,
+        h3 {
+            padding: 1em 0 0 0;
+        }
+
+        main > section > p > span {
+            font-size: .9em;
+        }
+
+        main > section > p {
+            padding: 0 0 0.8em 0;
+            line-height: 1em;
+        }
+
+        main > section > ul {
+            padding: 0 0 0 1.2em;
+        }
+
+        article {
+            max-width: 18em;
+        }
+
+        /*IDs*/
+        #linkedinlogo {
+          width: 17px;
+        }
+
+        #githublogo {
+          width: 17px;
+        }
+
+        #description {
+            font-style: italic;
+        }
+
+        #LangList {
+            margin-left: 7%;
+        }
+
+        #location {
+            margin-left: 10px;
+        }
+
+        #name {
+            font-style: italic;
+        }
+
+        #projectGrid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding-top: 10px;
+        }
+
+        #projectPanel {
+            
+            outline-color: black;
+            outline: auto;
+            outline-offset: 5px;
+        }
+
+        #projectTitle {
+            font-weight: bold;
+            font-size: smaller;
+            width: 1fr;
+            text-align: center;
+            display: grid;
+            padding-top: 1px;
+        }
+
+        #projectDescription {
+            font-size: smaller;
+        }
+
+        #projectLink {
+            color:rgb(0, 140, 255);
+            font-size: smaller;
+            text-align: center;
+            display:block;
+            margin:auto;
+            width: 1fr;
+        }
+
+        #projectTechs {
+            display: grid;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 40em) {
+           body {
+               padding: .5em;
+               font-size: .92em;
+            }
+
+            body > main {
+                flex-direction: column-reverse;
+            }
+
+            main > section,
+            main > aside,
+            header > aside,
+            header> section {
+                width: inherit; 
+            }
+
+            aside > section > article {
+                max-width: 32em;
+                width: inherit;
+            }
+
+            main > section {
+                padding:0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section>
+            <h1>Samuel Matlock</h1>
+            <p>Budding front-end developer. Always looking to contribute toward meaningful projects with like-minded developers.</p>
+        </section>
+
+    </header>
+    <main>
+        <section>
+            <h2>
+                RECENT PROJECTS
+            </h2>
+            <section id = "projectGrid">
+                <p id = "projectPanel">
+                    <span id = "projectTitle">Student Management System<br></span>
+                    <a href="https://github.com/samuelmatlock/StudentManagementSystem" target = "_blank" id = "projectLink">Github Repository<br></a>
+                    <span id = "projectDescription"><i><span id = "projectTechs">Java, PostgreSQL, REST API's</span></i><br>&#8226; Reduces company operations errors often and significantly.<br>&#8226; Improves employees' organization and class chemistry.</span>
+                </p>
+                <p id = "projectPanel">
+                    <span id = "projectTitle">Data Sorting Visualizer<br></span>
+                    <a href="https://github.com/samuelmatlock/Data-Sorting-Visualizer" target = "_blank" id = "projectLink">Github Repository<br></a>
+                    <span id = "projectDescription"><i><span id = "projectTechs">JavaScript, React.js, CSS, HTML</span></i><br>&#8226; Displays core data sorting algorithms with explanations.<br>&#8226; Assists daily in understanding computer resource efficiency.</span>
+                </p>
+                <p id = "projectPanel">
+                    <span id = "projectTitle">Some API Project<br></span>
+                    <a href="https://www.linkedin.com/in/samuelmatlock/" target = "_blank" id = "projectLink">Github Repository<br></a>
+                    <span id = "projectDescription"><i><span id = "projectTechs">Technologies</span></i><br>&#8226; Purpose #1<br>&#8226; Purpose #2</span>
+                </p>
+            </section>
+            <h2>
+                EXPERIENCE
+            </h2>
+            <h3>
+                Coding Bootcamp Student <span id = "location"> - National Remote</span>
+            </h3>
+            <p>
+                <span> 2022 &mdash; Present </span>
+            </p>
+            <p>
+                <span id = "name">Tech Elevator</span> - Accredited top-ranked full stack coding bootcamp.
+            </p>
+            <ul>
+                <li>
+                    Produced 20,000+ lines of code writing dozens of programs using Java, SQL, JavaScript, REST API's, CSS, Vue.js and more.
+                </li>
+                <li>
+                    Collaborated with senior developers for 100's of hours of pair programming using AGILE development practices and Git Version Control.
+                </li>
+                <li>
+                    Immersed 24/7 in professional communal coding environments, practiced thinking as a coder, strengthened understandings of core computer science concepts.
+                </li>
+            </ul>
+
+            <h3>
+                Programming & Robotics Teacher<span id = "location"> - Irvine, CA
+            </h3>
+            <p>
+                <span> 2022 &mdash; Present</span>
+            </p>
+            <p>
+                <span id = "name">Magikid Labs</span> - K-12 education in coding and engineering fundamentals.
+            </p>
+            <ul>
+                <li>
+                    Leading 10+ classes of K-12 students learning coding & robotics/engineering.
+                </li>
+                <li>
+                    Designed 24 lessons of company curriculum for Python & Lua while also personally advertising and discussing coursework with clients.
+                </li>
+                <li>
+                    Mentoring high-schoolers learning VEX GO/IQ/EXP Robotics & fundamentals of object-oriented programming.
+                </li>
+            </ul>
+
+            <h3>
+                Coding Tutor / Teacher<span id = "location"> - Los Alamitos, CA</span>
+            </h3>
+            <p>
+                <span>2020 &mdash; 2021</span>
+            </p>
+            <p>
+                <span id = "name">Code Ninjas</span> - Game-based curriculum to teach kids to coding.
+            </p>
+            <ul>
+                <li>
+                    Developed 20+ lessons and curriculum for 2 courses, created Lua course (Roblox), assigned managerial duties and interacted daily with customers and students.
+                </li>
+                <li>
+                    Taught dozens of classes for 100's of students learning coding by making fun games.
+                </li>
+            </ul>
+            <h3>
+                IT Support Intern <span id = "location"> - El Paso, TX</span>
+            </h3>
+            <p>
+                <span>2019</span>
+            </p>
+            <p>
+                <span id = "name">El Paso Chamber of Commerce</span> - Largest business organization in El Paso at 1400+ members.
+            </p>
+            <ul>
+                <li>
+                    Managed 3 office softwares and hosted techinal training seminars for 14 employees.
+                </li>
+                <li>
+                    Created media for clients and company events based on the data analysis of market developments and members' changing  interests.
+                </li>
+                <li>
+                    Updated website structure and content through collaboration with executive staff and direct superiors.
+                </li>
+            </ul>
+        </section>
+        <aside>
+            <h2>
+                CONTACT
+            </h2>
+            <nav>
+                <ul>
+                    <li>
+                      <a href="mailto:samuel@samuelmatlock.com">&#x1F4E7 samuel@samuelmatlock.com</a>
+                    </li>
+                    <li>
+                        <img src = "https://cdn-icons-png.flaticon.com/512/174/174857.png" alt = "LinkedIn Logo" id = "linkedinlogo">
+                        <a href="https://www.linkedin.com/in/samuelmatlock/" target = "_blank">linkedin.com/in/samuelmatlock/</a>
+                    </li>
+                    <li>
+                        <img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" alt = "GitHub Logo" id = "githublogo">
+                        <a href="https://github.com/samuelmatlock" target = "_blank">github.com/samuelmatlock</a>
+                    </li>
+                </ul>
+            </nav>
+            <h2>
+                LANGUAGES &amp; TECHS
+            </h2>
+            <section>
+                <ul id = "LangList">
+                    <li>
+                        Java, SQL, Javascript, REST API's, Vue.js, React.js, Python, CSS
+                    </li>
+                    <li>
+                        SCRUM, Git(hub/lab), Agile, IntelliJ, Visual Studio Code, DevOps
+                    </li>
+                    <li>
+                        Illustrator, Photoshop, InDesign
+                    </li>
+                </ul>
+            </section>
+            <h2>
+                EDUCATION
+            </h2>
+            <h3>
+                University of California, Irvine
+            </h3>
+            <p>
+                BA. Political Science 
+                <br> <br>
+                <div id = "description">Relevant Coursework:</div>
+                <div>Boolean Algebra & Logic, CS Probability & Statistics, Linear Algebra, Software Libraries, Intermediate Python</div>
+            </p>
+            <h3>
+                Tech Elevator Bootcamp
+            </h3>
+            <p>500+ hours of live class with senior developers, 1000+ hours of coding to learn full-stack web-based software systems across 9 months of 6:00 AM coding sessions.</p>
+
+            <h3>
+                Coding Courses (Online)
+            </h3>
+            <p>Harvard CS50 Course (Python, SQL, JavaScript, CSS), Udemy (React), CodeAcademy (Python, JavaScript, CSS, React), The Odin Project, freeCodeCamp (JavaScript, Python)</p>
+
+            <h2>MISCELLANEOUS</h2>
+            <h3>
+                Orange County Parks
+            </h3>
+            <p>
+                CPR Trained Hiking & Kayak Guide.
+            </p>
+            <h3>
+                Pacific Academy Elementary
+            </h3>
+            <p>
+                Volunteer Robotics & Code Teacher.
+            </p>
+            <h3>
+                Fluent German Speaker
+            </h3>
+            <p>
+                Local student in Baumholder for 3 years.
+            </p>
+        </aside>
+    </main>
+</body>
+</html>
