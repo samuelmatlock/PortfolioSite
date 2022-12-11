@@ -1,3 +1,4 @@
 # Personal Portfolio Site
-[samuelmatlock.com](samuelmatlock.com)
+[samuelmatlock.com](https://www.samuelmatlock.com)
+
 *Description*
